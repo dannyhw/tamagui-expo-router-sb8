@@ -1,15 +1,25 @@
-import { ExternalLink } from '@tamagui/lucide-icons'
-import { Anchor, H2, Paragraph, XStack, YStack } from 'tamagui'
-import { ToastControl } from 'app/CurrentToast'
+import { ExternalLink } from "@tamagui/lucide-icons";
+import { Anchor, H2, Paragraph, XStack, YStack } from "tamagui";
+import { ToastControl } from "app/CurrentToast";
+import { Link } from "expo-router";
 
 export default function TabOneScreen() {
   return (
     <YStack f={1} ai="center" gap="$8" px="$10" pt="$5">
       <H2>Tamagui + Expo</H2>
 
+      <Link href={"/storybook"}>storybook</Link>
+
       <ToastControl />
 
-      <XStack ai="center" jc="center" fw="wrap" gap="$1.5" pos="absolute" b="$8">
+      <XStack
+        ai="center"
+        jc="center"
+        fw="wrap"
+        gap="$1.5"
+        pos="absolute"
+        b="$8"
+      >
         <Paragraph fos="$5">Add</Paragraph>
 
         <Paragraph fos="$5" px="$2" py="$1" col="$blue10" bg="$blue5" br="$3">
@@ -25,8 +35,8 @@ export default function TabOneScreen() {
           py="$1"
           br="$3"
           bg="$purple5"
-          hoverStyle={{ bg: '$purple6' }}
-          pressStyle={{ bg: '$purple4' }}
+          hoverStyle={{ bg: "$purple6" }}
+          pressStyle={{ bg: "$purple4" }}
         >
           <Anchor
             href="https://tamagui.dev/docs/core/configuration"
@@ -44,5 +54,5 @@ export default function TabOneScreen() {
         </Paragraph>
       </XStack>
     </YStack>
-  )
+  );
 }
